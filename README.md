@@ -67,7 +67,7 @@ N.E.E.N.U is an **AI-powered voice assistant** with a **web interface**, develop
 
 ## 👨‍💻 Author
 
-Developed by [Your Name / Team Name]
+Developed by Pranav H V
 
 ---
 
