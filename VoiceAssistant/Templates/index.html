@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voice Assistant</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <h1>Voice Assistant</h1>
+        <p>Your personal AI helper</p>
+    </nav>
+    <div class="container">
+        <h2>N.E.E.N.U</h2>
+        <form action="{% url 'runcode' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="image-button">
+                <img src="{% static 'uppi2.png' %}" alt="Run Script">
+            </button>
+        </form>
+        {% if output %}
+            <h3>Output:</h3>
+            <div class="output-container">
+                <pre>{{ output }}</pre>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
